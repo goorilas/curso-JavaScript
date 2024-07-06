@@ -1,3 +1,4 @@
+//seleconando um Id e colocando eventos de clicar com o mause, entrar na div arrastando o mause, e sair da div com o mause.
 var a = window.document.getElementById('area')
 
 function clicar() {
