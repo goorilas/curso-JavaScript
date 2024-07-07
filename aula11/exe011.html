@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+</head>
+<body>
+    <h1>Nacionalidade</h1>
+    <p>De que país você veio? <input type="text" name="nac" id="nac">
+    <input type="button" value="Verificar" onclick="adicionar()">
+    <div id="país"></div>
+    <script>
+        function adicionar() {
+            //resgata o campo digitado
+            var nacao = window.document.getElementById('nac')
+            //resgata a div a baixo do campo digitado.
+            var pais = window.document.getElementById('país')
+            //armazena o valor digitado em uma nova variavel para ser usada.
+            var add = (nacao.value)
+            //adiciona uma fraze no html com uma palavra em negrito com strong, usano template string.
+            pais.innerHTML = `<p>Seu país de origem é o <strong>${add}</strong>.`
+                //condição para se a variavel for brasil.
+                if (add == 'BRASIL') {
+                    pais.innerHTML += `<p>Você é brasileiro.`
+                //condição para variavel ser diferente de brasil.
+                } else {
+                    pais.innerHTML += `<p> Você é estrangeiro.`
+                }
+            }
+        
+    </script>
+</body>
+</html>
